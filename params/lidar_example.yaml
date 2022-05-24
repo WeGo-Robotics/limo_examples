@@ -1,0 +1,7 @@
+# params/lidar_example.yaml
+# Common parameters for limo_example
+---
+
+# Dynamic parameters cannot have a namespace
+min_angle_deg: -0.5
+max_angle_deg:  0.5

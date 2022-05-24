@@ -1,0 +1,7 @@
+# params/move_example.yaml
+# Common parameters for limo_example
+---
+
+# Dynamic parameters cannot have a namespace
+linear_x:  0.2
+angular_z: 0.2

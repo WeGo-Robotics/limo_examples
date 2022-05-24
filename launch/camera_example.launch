@@ -1,0 +1,6 @@
+<launch>
+    <node name="camera_example" pkg="limo_examples" type="camera_example.py" output="screen">
+        <rosparam command="load" file="$(find limo_examples)/params/camera_example.yaml"/>
+    </node>
+    <node name="rqt_image_view" pkg="rqt_image_view" type="rqt_image_view" args="/canny"/>
+</launch>

@@ -1,0 +1,7 @@
+# params/camera_example.yaml
+# Common parameters for limo_example
+---
+
+# Dynamic parameters cannot have a namespace
+canny_min_threshold: 0
+canny_max_threshold: 360
