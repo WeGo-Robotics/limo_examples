@@ -13,10 +13,9 @@ LIMO Application by WeGo-Robotics
 * 기본 동작을 위한 LIMO_Driver, LiDAR Driver, Camera Driver 구동 후 아래 내용 실행
 ```bash
 $ cd catkin_ws/src
-$ git clone https://github.com/WeGo-Robotics/yolov3-pytorch-ros.git
-$ git clone https://github.com/WeGo-Robotics/wego_limo.git
+$ git clone https://github.com/WeGo-Robotics/limo_examples.git
 $ cd .. && catkin_make
 $ source devel/setup.bash
-$ roslaunch wego ....launch (포함된 launch파일 실행)
+$ roslaunch limo_examples ....launch or rosrun limo_examples ....py 
 ```
 
