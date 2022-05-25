@@ -16,8 +16,8 @@ def startApplication():
     topic_publisher = rospy.Publisher("cmd_vel", Twist, queue_size=5)
     time.sleep(2)
 
-def showOpenCvImage(_image, _image_name="myImage"):
-    cv2.imshow(_image_name, _image)
+def showOpenCvImage(_image, _window_name="myImage"):
+    cv2.imshow(_window_name, _image)
     cv2.waitKey(1)
     
 def getLidarRangeUsingAngle(_lidar, _angle=0.0, _type="deg"):
