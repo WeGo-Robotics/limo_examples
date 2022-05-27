@@ -1,4 +1,4 @@
-# wego_limo
+# limo_application
 LIMO Application by WeGo-Robotics
 
 ### Outline
