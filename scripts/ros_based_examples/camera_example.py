@@ -3,9 +3,8 @@
 import rospy
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
-## dynamic_reconfigure import list
 from dynamic_reconfigure.server import Server
-from wego_limo.cfg import camera_exampleConfig
+from limo_examples.cfg import camera_exampleConfig
 
 import cv2
 

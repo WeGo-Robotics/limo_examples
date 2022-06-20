@@ -2,13 +2,10 @@
 
 import rospy
 from sensor_msgs.msg import LaserScan
-## dynamic_reconfigure import list
 from dynamic_reconfigure.server import Server
-from wego_limo.cfg import lidar_exampleConfig
+from limo_examples.cfg import lidar_exampleConfig
 
 import math
-
-
 
 class LidarExample():
     def __init__(self):
@@ -41,6 +38,7 @@ class LidarExample():
 
 def run():
     new_class = LidarExample()
+    rospy.loginfo_once("ROS Node Initialized")
     rospy.spin()
             
 if __name__=="__main__":

@@ -3,17 +3,13 @@
 import rospy
 from geometry_msgs.msg import Twist
 from std_msgs.msg import String
-## dynamic_reconfigure import list
 from dynamic_reconfigure.server import Server
-from wego_limo.cfg import move_exampleConfig
+from limo_examples.cfg import move_exampleConfig
 
 class MoveExample():
     def __init__(self):
-        
         # ROS part
-        
-        rospy.init_node("lidar_example")
-        ## dynamic_reconfigure setup list
+        rospy.init_node("move_example")
         srv = Server(move_exampleConfig, self.reconfigure_callback)
         rospy.Subscriber("move_str",String,self.move_str_callback)
         self.twist_pub = rospy.Publisher("/cmd_vel",Twist,queue_size=1)
@@ -49,6 +45,7 @@ class MoveExample():
             
 def run():
     new_class = MoveExample()
+    rospy.loginfo_once("ROS Node Initialized")
     rospy.spin()
             
 if __name__=="__main__":

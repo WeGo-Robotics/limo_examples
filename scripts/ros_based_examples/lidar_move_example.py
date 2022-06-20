@@ -3,11 +3,10 @@
 import rospy
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
-import math
-
-## dynamic_reconfigure import list
 from dynamic_reconfigure.server import Server
-from wego_limo.cfg import lidar_move_exampleConfig
+from limo_examples.cfg import lidar_move_exampleConfig
+
+import math
 
 class LidarMove():
     def __init__(self):
@@ -16,7 +15,7 @@ class LidarMove():
         
         # ROS part
         
-        rospy.init_node("lidar_move")
+        rospy.init_node("lidar_move_example")
         ## dynamic_reconfigure setup list
         srv = Server(lidar_move_exampleConfig, self.reconfigure_callback)
         self.pub = rospy.Publisher("/cmd_vel",Twist,queue_size=1)
@@ -60,6 +59,7 @@ class LidarMove():
         
 def run():
     new_class = LidarMove()
+    rospy.loginfo("Initialized, Node Spin Now")
     rospy.spin()
     
     
